@@ -27,8 +27,6 @@ const ModalContainer = styled.div`
 `;
 
 const MobileButtons = ({
-  isOpen,
-  onClose,
   restartGame,
   startNewGame,
   resumeGame,
@@ -36,10 +34,10 @@ const MobileButtons = ({
   return (
     <ModalOverlay>
       <ModalContainer>
-      <CustomButton text="Restart" backgroundColor="--color-orange" textColor="--color-background-page"  BackgroundColorHover="--color-orange-hover" onClick={restartGame} />
+      <CustomButton $text="Restart" $backgroundColor="var(--color-orange)" $textColor="var(--color-background-page)" $textcolorhover="var(--color-background-page)" $backgroundColorHover="var(--color-orange-hover)" onClick={restartGame} />
          
-          <CustomButton text="New Game" backgroundColor="--color-boxes" textColor="--color-menu-active" hoverColor="--color-menu-hover" onClick={startNewGame} />
-          <CustomButton text="Resume Game" backgroundColor="--color-boxes" textColor="--color-menu-active" hoverColor="--color-menu-hover" onClick={resumeGame} />
+          <CustomButton $text="New Game" bgcolor="--color-boxes" textcolor="--color-menu-active" hovercolor="--color-menu-hover" onClick={startNewGame} />
+          <CustomButton $text="Resume Game" bgcolor="--color-boxes" textcolor="--color-menu-active" hovercolor="--color-menu-hover" onClick={resumeGame} />
             
       </ModalContainer>
     </ModalOverlay>

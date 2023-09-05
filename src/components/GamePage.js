@@ -51,11 +51,9 @@ const GamePageWrapper = styled.div`
 
 const ButtonContainer = styled.div`
 display: flex;
-width: 292px;
 gap: 1.375rem;
-
-
 `
+
 const GamePageHeader = styled.div`
 width: 100%;
 display: flex;
@@ -230,6 +228,7 @@ color: ${(props) =>
 
   @media (min-width: 1200px) {
     font-size: 1.125rem; 
+    margin-bottom: 0;
     }
   
 `;
@@ -371,6 +370,8 @@ const GamePage = () => {
     setElapsedTime(0);
     setIsMenuOpen(false);
     resetGameFinishSound();
+    resetFlipSound();
+    resetMatchSound();
     // Reset player scores
     const resetPlayersInfo = playersInfo.map((player) => ({
       ...player,
@@ -397,6 +398,8 @@ const GamePage = () => {
   const startNewGame = () => {
     setShowPopup(false);
     resetGameFinishSound();
+    resetFlipSound();
+    resetMatchSound();
     navigate('/');
   };
 
@@ -441,7 +444,7 @@ const GamePage = () => {
         // Add both card IDs to the highlightedMatches state
         setHighlightedMatches([card1, card2]);
         playMatchSound();
-        // Clear the highlightedMatches state after a brief delay (e.g., 1000ms)
+        // Clear the highlightedMatches state after a brief delay (e.g., 1500ms)
         setTimeout(() => {
           setHighlightedMatches([]);
         }, 1500);
@@ -556,13 +559,20 @@ const GamePage = () => {
           
          
          
-        }}text="Menu" backgroundColor="--color-orange" textColor="--color-background-page"  BackgroundColorHover="--color-orange-hover" onClick={handleMenuOpen} />
+        }} 
+        
+        $text="Menu"  $backgroundColor="var(--color-orange)" $textColor="var(--color-background-page)" $textcolorhover="var(--color-background-page)" $backgroundColorHover="var(--color-orange-hover)" onClick={handleMenuOpen}  />
         </ButtonWrapper>
 
       ) : (
-  
-        <ButtonContainer>
-        <CustomButton fontSize={{
+        <ButtonContainer >
+      
+        <CustomButton
+        width={{
+          large: '7.9375rem',
+        }}
+
+        fontSize={{
           small: '1.25rem',
           large: '1.25rem',
           
@@ -573,8 +583,13 @@ const GamePage = () => {
           
          
          
-        }}text="Restart" backgroundColor="--color-orange" textColor="--color-background-page"  BackgroundColorHover="--color-orange-hover" onClick={restartGame} />
-        <CustomButton fontSize={{
+        }} $text="Restart" $backgroundColor="var(--color-orange)" $textColor="var(--color-background-page)" $textcolorhover="var(--color-background-page)" $backgroundColorHover="var(--color-orange-hover)" onClick={restartGame} />
+        <CustomButton
+        width={{
+          large: '9.3125rem',
+        }}
+        
+        fontSize={{
           small: '1.25rem',
           large: '1.25rem',
           
@@ -582,7 +597,8 @@ const GamePage = () => {
         }} height={{
           small: '3.25rem',
           large: '3.25rem',  
-        }} text="New Game" backgroundColor="--color-boxes" textColor="--color-menu-active" TextColorHover="--color-background-page" BackgroundColorHover="--color-menu-hover" onClick={startNewGame} />
+        }} $text="New Game" onClick={startNewGame} />
+   
         </ButtonContainer>
          
       )}

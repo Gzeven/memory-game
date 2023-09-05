@@ -73,7 +73,6 @@ const Card = ({
   highlightedMatches,
   matched,
   playFlipSound,
-  gridSize, 
   columns
 }) => {
   const isHighlighted = highlightedMatches.includes(id);

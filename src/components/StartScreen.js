@@ -59,7 +59,7 @@ const OptionBox = styled.div`
 `;
 
 const OptionTitle = styled.h2`
-  font-size: 0.9375rem;
+ font-size: 0.9375rem;
   margin-bottom: 0.6875rem;
   color: var(--color-text);
   @media (min-width: 768px) {
@@ -178,7 +178,7 @@ const StartScreen = () => {
           </OptionButtonContainer>
         </OptionBox>
         <ButtonWrapper>
-        <CustomButton text="Start Game" backgroundColor="--color-orange" textColor="--color-background-page" BackgroundColorHover="--color-orange-hover"  onClick={startGame} />
+        <CustomButton $text="Start Game"  $backgroundColor="var(--color-orange)" $textColor="var(--color-background-page)" $textcolorhover="var(--color-background-page)" $backgroundColorHover="var(--color-orange-hover)" onClick={startGame}/>
         </ButtonWrapper>
         </OptionBoxContainer>
     </StartScreenWrapper>
