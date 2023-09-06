@@ -355,6 +355,8 @@ const GamePage = () => {
       );
       setCards(updatedCards);
       setFlippedCards([...flippedCards, id]);
+      // Play the flip sound only when the card is actually flipping
+    playFlipSound();
     }
   };
 
@@ -423,7 +425,7 @@ const GamePage = () => {
         );
         setCards(updatedCards);
         setFlippedCards([]); // Reset flippedCards after finding a match
-        playFlipSound();
+       
 
         setMatchedPairs((prevMatchedPairs) => prevMatchedPairs + 1); // Increment matched pairs
         if (matchedPairs + 1 === totalPairs) {
@@ -624,7 +626,6 @@ const GamePage = () => {
         theme={theme}
         handleCardClick={handleCardClick}
         highlightedMatches={highlightedMatches}
-        playFlipSound={playFlipSound}
         
       />
       {players === 1 && (

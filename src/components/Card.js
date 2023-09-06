@@ -72,7 +72,6 @@ const Card = ({
   onClick,
   highlightedMatches,
   matched,
-  playFlipSound,
   columns
 }) => {
   const isHighlighted = highlightedMatches.includes(id);
@@ -81,7 +80,7 @@ const Card = ({
     <StyledCard
       onClick={() => {
         onClick(id);
-        playFlipSound(); // Play the flip sound
+   
       }}
     >
       <CardInner $flipped={flipped}>

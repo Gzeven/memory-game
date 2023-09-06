@@ -27,7 +27,6 @@ const GameGrid = ({
   theme,
   handleCardClick,
   highlightedMatches,
-  playFlipSound,
   gridSize
   
 }) => {
@@ -43,7 +42,6 @@ const GameGrid = ({
           theme={theme}
           onClick={handleCardClick}
           highlightedMatches={highlightedMatches}
-          playFlipSound={playFlipSound}
           gridSize={gridSize}
           columns={columns}
           
