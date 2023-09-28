@@ -30,6 +30,10 @@ const CardFront = styled.div`
   position: absolute;
   backface-visibility: hidden;
   border-radius: 50%;
+  &:hover {
+    background-color: var(--color-menu-hover);
+  }
+
 `;
 
 const CardBack = styled.div`
@@ -48,6 +52,7 @@ const CardBack = styled.div`
   backface-visibility: hidden;
   transform: rotateY(180deg);
   border-radius: 50%;
+
 `;
 
 const NumberContent = styled.span`
