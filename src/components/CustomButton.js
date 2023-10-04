@@ -13,10 +13,17 @@ const ButtonWrapper = styled.button`
   font-size: ${(props) => props.fontSize?.small || '1.125rem'};
   transition: all 0.5s ease;
 
-  &:hover {
-    background-color: ${(props) => props.$backgroundColorHover || 'var(--color-menu-hover)'};
+  @media(hover: hover) and (pointer: fine) {
+    &:hover {
+      background-color: ${(props) => props.$backgroundColorHover || 'var(--color-menu-hover)'};
     color: ${(props) => props.$textcolorhover || 'var(--color-background-page)'};
   }
+}
+
+  /* &:hover {
+    background-color: ${(props) => props.$backgroundColorHover || 'var(--color-menu-hover)'};
+    color: ${(props) => props.$textcolorhover || 'var(--color-background-page)'};
+  } */
 
   @media (min-width: 768px) {
     font-size: ${(props) => props.fontSize?.large || props.fontSize?.small || '2rem'};

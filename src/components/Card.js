@@ -30,9 +30,7 @@ const CardFront = styled.div`
   position: absolute;
   backface-visibility: hidden;
   border-radius: 50%;
-  /* &:hover {
-    background-color: var(--color-menu-hover);
-  } */
+ 
   @media(hover: hover) and (pointer: fine) {
     &:hover {
     background-color: var(--color-menu-hover);

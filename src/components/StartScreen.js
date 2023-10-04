@@ -95,9 +95,11 @@ color: var(--color-background-page);
 cursor: pointer;
  transition: background-color 0.3s, color 0.3s;
 
-  &:hover {
-    background-color: var(--color-menu-hover);
+  @media(hover: hover) and (pointer: fine) {
+    &:hover {
+      background-color: var(--color-menu-hover);
   }
+}
   @media (min-width: 768px) {
     font-size: 1.625rem;
     height: 3.25rem;
