@@ -88,7 +88,7 @@ height: 3rem;
   font-size: 1rem;
   
   background-color: ${(props) =>
-    props.isWinner ? 'var(--color-background)' : 'var(--color-boxes)'};
+    props.$isWinner ? 'var(--color-background)' : 'var(--color-boxes)'};
   width: 100%;
   padding: 0 1rem;
   border-radius: 5px;
@@ -103,7 +103,7 @@ const PopUpInfoText = styled.p`
 font-size: 0.8125rem;
 color: var(--color-text);
 color: ${(props) =>
-    props.isWinner ? 'var(--color-background-page)' : 'var(--color-text)'};
+    props.$isWinner ? 'var(--color-background-page)' : 'var(--color-text)'};
 @media (min-width: 768px) {
   font-size: 1.125rem;
      }
@@ -113,7 +113,7 @@ color: ${(props) =>
 
 const PopUpInfoValue = styled.div`
 color: ${(props) =>
-    props.isWinner ? 'var(--color-background-page)' : 'var(--color-menu-active)'};
+    props.$isWinner ? 'var(--color-background-page)' : 'var(--color-menu-active)'};
     font-size: 1.25rem;
 @media (min-width: 768px) {  
   font-size: 2rem;
@@ -190,9 +190,9 @@ const Popup = ({
                 .sort((a, b) => b.score - a.score)
                 .map((player) => (
                  
-                  <PopupInfo isWinner={winners.includes(player.id)} key={player.id}>
+                  <PopupInfo $isWinner={winners.includes(player.id)} key={player.id}>
                   <PopupPlayerScore key={player.id}>
-                    <PopUpInfoText isWinner={winners.includes(player.id)}>
+                    <PopUpInfoText $isWinner={winners.includes(player.id)}>
                   
                       {player.name}     {winners.includes(player.id) && (
                         `(Winner!)`
@@ -202,7 +202,7 @@ const Popup = ({
                   
                  
                   </PopupPlayerScore>
-                  <PopUpInfoValue isWinner={winners.includes(player.id)}>
+                  <PopUpInfoValue $isWinner={winners.includes(player.id)}>
                  {player.score} Pairs
                   
                 </PopUpInfoValue>
