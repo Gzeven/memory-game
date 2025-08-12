@@ -9,7 +9,6 @@ const App = () => {
       <Routes>
         <Route path="/" element={<StartScreen />} />
         <Route path="/game" element={<GamePage />} />
-        {/* Add more routes if needed */}
       </Routes>
     </Router>
   );

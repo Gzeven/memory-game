@@ -20,11 +20,6 @@ const ButtonWrapper = styled.button`
   }
 }
 
-  /* &:hover {
-    background-color: ${(props) => props.$backgroundColorHover || 'var(--color-menu-hover)'};
-    color: ${(props) => props.$textcolorhover || 'var(--color-background-page)'};
-  } */
-
   @media (min-width: 768px) {
     font-size: ${(props) => props.fontSize?.large || props.fontSize?.small || '2rem'};
     height: ${(props) => props.height?.large || props.height?.small || '4.375rem'};
