@@ -13,6 +13,12 @@ const ButtonWrapper = styled.button`
   font-size: ${(props) => props.fontSize?.small || '1.125rem'};
   transition: all 0.5s ease;
 
+    &:focus-visible {
+    outline: none; /* removes default outline */
+    box-shadow: 0 0 0 3px var(--color-background), 0 0 0 6px var(--color-background-page); 
+    /* inner ring orange, outer white for contrast */
+  }
+
   @media(hover: hover) and (pointer: fine) {
     &:hover {
       background-color: ${(props) => props.$backgroundColorHover || 'var(--color-menu-hover)'};
