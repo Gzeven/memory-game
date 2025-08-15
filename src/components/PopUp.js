@@ -1,4 +1,3 @@
-import React from 'react';
 import styled from 'styled-components';
 import CustomButton from './CustomButton';
 import { formatTime } from './GamePage';
@@ -32,7 +31,6 @@ const ModalContainer = styled.div`
 `;
 
 const PopupContainer = styled.div`
-  /* padding: 20px; */
   display: flex;
   flex-direction: column;
   align-items: center;
